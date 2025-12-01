@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Share Carefully, Reduce Identifiers — Sharenting Catalogue</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+  <style>
+    .refs{margin-top:8px;padding-left:18px}
+    .refs li{margin:6px 0}
+    .ext{font-size:13px;color:#374151}
+    .linkset{display:grid;gap:6px;margin:8px 0}
+    .note{font-size:13px;color:#6B7280}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Share Carefully, Reduce Identifiers</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quickrules.html">Quick Rules</a>
+      </nav>
+    </div>
+
+    <div class="chips">
+      <span class="chip badge">Minimisation</span>
+      <span class="chip badge">Confidentiality</span>
+      <span class="chip badge">Best Interests</span>
+    </div>
+
+    <section class="section">
+      <h2>Vignette</h2>
+      <p>To cover treatment/travel costs, a parent posts diagnosis details, lab results, and a public crowdfunding link. The post spreads quickly; the child’s medical story becomes searchable and reusable beyond the family’s control.</p>
+    </section>
+
+    <section class="section">
+      <h2>Forces &amp; Risks</h2>
+      <ul class="small">
+        <li>Urgency to fundraise vs. long-term privacy</li>
+        <li>Trust via detail vs. oversharing of PHI</li>
+        <li>Public sympathy vs. scraping/secondary use</li>
+      </ul>
+      <p class="small"><strong>Risk path:</strong> disclosure → increased accessibility → secondary use/appropriation <br/>
+      <strong>Contextual Integrity:</strong> health context leaking into broad, remixable audiences</p>
+    </section>
+
+    <section class="section flex" data-assent-group>
+      <div class="col">
+        <h2>Prompts</h2>
+        <div class="box">
+          <p><strong>Rights:</strong> Children have a say—ask first. Donors don’t need full medical details.</p>
+          <p><strong>Risk:</strong> PHI spreads quickly. Reduce identifiers or share to Close Friends?</p>
+          <p><strong>Norms:</strong> Many parents blur names &amp; documents and limit audience when fundraising.</p>
+        </div>
+
+        <h2>Assent</h2>
+        <div class="assent">
+          <input id="a0" type="radio" name="assent" value="A0" checked><label for="a0">A0 Clear</label>
+          <input id="a1" type="radio" name="assent" value="A1"><label for="a1">A1 Unknown</label>
+          <input id="a2" type="radio" name="assent" value="A2"><label for="a2">A2 Qualified</label>
+          <input id="a3" type="radio" name="assent" value="A3"><label for="a3">A3 Dissent/High</label>
+        </div>
+
+        <!-- HELPERS (A-state aware) -->
+        <h2>Helpers</h2>
+
+        <div class="box safe" data-assent="A0" style="display:none">
+          <ul class="small">
+            <li>
+              <span class="pill note">Remove identifiers</span>
+              <button class="info" aria-label="Identifiers help" aria-expanded="false" data-def="identifiers">i</button>
+              (blur names, MRNs, lab IDs; avoid clinic signage).
+            </li>
+            <li>
+              <span class="pill note">Non-identifying thumbnail</span>
+              <button class="info" aria-label="Non-identifying thumbnail (PHI)" aria-expanded="false" data-def="thumbnailphi">i</button>
+            </li>
+          </ul>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box note" data-assent="A1" style="display:none">
+          <ul class="small">
+            <li><span class="pill off">Save to draft</span> and ask when the child is present.</li>
+            <li>
+              <span class="pill note">Replace specifics with ranges</span> (e.g., “weekly therapy,” not dates/codes).
+            </li>
+            <li>
+              <span class="pill off">Remix Off</span> • <span class="pill off">Downloads Off</span> • <span class="pill off">Location Off</span>
+              <button class="info" aria-label="Off explained" aria-expanded="false" data-def="off">i</button>
+            </li>
+          </ul>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box note" data-assent="A2" style="display:none">
+          <ul class="small">
+            <li>
+              <span class="pill on">Close Friends</span>
+              <button class="info" aria-label="Close Friends help" aria-expanded="false" data-def="friends">i</button>
+            </li>
+            <li>
+              <span class="pill note">Remove identifiers</span>
+              <button class="info" aria-label="Identifiers help" aria-expanded="false" data-def="identifiers">i</button>
+              ; non-identifying thumbnail.
+            </li>
+            <li><span class="pill off">Remix Off</span> • <span class="pill off">Downloads Off</span> • <span class="pill off">Location Off</span></li>
+          </ul>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box tight" data-assent="A3" style="display:none">
+          <ul class="small">
+            <li>
+              <span class="pill off">Private/Close Friends</span>
+              <button class="info" aria-label="Close Friends/Private help" aria-expanded="false" data-def="friends">i</button>
+              ; keep as draft unless assent changes.
+            </li>
+            <li><span class="pill off">Remix Off</span> • <span class="pill off">Downloads Off</span> • <span class="pill off">Location Off</span></li>
+            <li><span class="pill note">Use text-only update</span> (no docs/faces) with the crowdfunding link.</li>
+          </ul>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="note">Bystanders &amp; co-ownership: blur other patients/parents; avoid nurse/clinic boards in frame.</div>
+      </div>
+
+      <div class="col">
+        <h2>Control bindings</h2>
+
+        <!-- TikTok bindings A0–A3 -->
+        <div class="box note" data-assent="A0" style="display:none">
+          <h3 class="small">TikTok — A0</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill na">No change</span></div>
+            <div class="muted">Remix</div>
+            <div><span class="pill off">Off (recommended)</span></div>
+            <div class="muted">Downloads</div>
+            <div><span class="pill off">Off (recommended)</span></div>
+            <div class="muted">Location</div>
+            <div><span class="pill off">Off (recommended)</span></div>
+          </div>
+          <div class="muted">Comments</div>
+        <div><span class="pill off">Limited/Off</span>
+        <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+        </div>
+          <div class="info-host"></div>
+          <div class="ext linkset">
+            <a href="https://www.tiktok.com/safety/en/community-controls/" target="_blank" rel="noopener">Downloads &amp; audience basics</a>
+            <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/duets" target="_blank" rel="noopener">Duet</a>
+            <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/stitch" target="_blank" rel="noopener">Stitch</a>
+          </div>
+        </div>
+
+        <div class="box tight" data-assent="A1" style="display:none">
+          <h3 class="small">TikTok — A1</h3>
+          <div class="kv">
+            <div class="muted">Audience</div><div><span class="pill na">No change</span></div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+        <div><span class="pill off">Limited/Off</span>
+        <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+        </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box note" data-assent="A2" style="display:none">
+          <h3 class="small">TikTok — A2</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill on">Narrowed</span>
+              <button class="info" aria-label="Narrowed audience help" aria-expanded="false" data-def="narrowed">i</button>
+              <span class="small muted">(note)</span>
+            </div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+        <div><span class="pill off">Limited/Off</span>
+        <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+        </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box tight" data-assent="A3" style="display:none">
+          <h3 class="small">TikTok — A3</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill off">Close Friends / Private</span>
+              <button class="info" aria-label="Close Friends/Private help" aria-expanded="false" data-def="friends">i</button>
+            </div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+        <div><span class="pill off">Limited/Off</span>
+        <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+        </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+        <!-- Instagram bindings A0–A3 -->
+        <div class="box note" data-assent="A0" style="display:none">
+          <h3 class="small">Instagram — A0</h3>
+          <div class="kv">
+            <div class="muted">Audience</div><div><span class="pill na">No change</span></div>
+            <div class="muted">Remix</div><div><span class="pill off">Off (recommended)</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off (recommended)</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off (recommended)</span></div>
+            <div class="muted">Comments</div>
+            <div><span class="pill off">Limited/Off</span>
+            <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+            </div>
+
+          </div>
+          <div class="info-host"></div>
+          <div class="ext linkset">
+            <a href="https://www.facebook.com/help/792438641600810/" target="_blank" rel="noopener">Remix controls (Instagram Help)</a>
+          </div>
+        </div>
+
+        <div class="box tight" data-assent="A1" style="display:none">
+          <h3 class="small">Instagram — A1</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill on">Close Friends</span>
+              <button class="info" aria-label="Close Friends help" aria-expanded="false" data-def="friends">i</button>
+            </div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span> <span class="small muted">(if surfaced)</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span> <span class="small muted">(if surfaced)</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+            <div><span class="pill off">Limited/Off</span>
+            <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+            </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box note" data-assent="A2" style="display:none">
+          <h3 class="small">Instagram — A2</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill on">Close Friends</span>
+              <button class="info" aria-label="Close Friends help" aria-expanded="false" data-def="friends">i</button>
+            </div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span> <span class="small muted">(if surfaced)</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+            <div><span class="pill off">Limited/Off</span>
+            <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+            </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+        <div class="box tight" data-assent="A3" style="display:none">
+          <h3 class="small">Instagram — A3</h3>
+          <div class="kv">
+            <div class="muted">Audience</div>
+            <div><span class="pill off">Close Friends / Private</span>
+              <button class="info" aria-label="Close Friends/Private help" aria-expanded="false" data-def="friends">i</button>
+            </div>
+            <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Downloads</div><div><span class="pill off">Off</span> <span class="small muted">(if surfaced)</span></div>
+            <div class="muted">Location</div><div><span class="pill off">Off</span></div>
+            <div class="muted">Comments</div>
+            <div><span class="pill off">Limited/Off</span>
+            <button class="info" aria-label="Comments Limited/Off help" aria-expanded="false" data-def="comments">i</button>
+            </div>
+          </div>
+          <div class="info-host"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Law &amp; Policy</h2>
+      <div class="box small">
+        <div class="linkset">
+            <span>“Children have a right to be heard.” — <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">UNCRC GC No. 12</a></span>
+            <span>“High privacy by default.” — <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">ICO Children’s Code</a></span>
+            <span>Assent in pediatrics — <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">AAP (2016)</a> / <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">AAP (1995)</a></span>
+            <span>HIPAA scope — applies to covered entities (providers/health plans), not parents; clinic footage can still expose PHI: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/index.html" target="_blank" rel="noopener">HHS HIPAA Privacy Rule</a></span>
+            <span>COPPA scope — regulates operators of online services collecting from &lt;13s, not parents posting: <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">FTC COPPA</a></span>
+        </div>
+        <p class="note">Crowdfunding is usually outside HIPAA, but treat health details as sensitive: remove identifiers, avoid clinic signage, and limit audience/comments.</p>
+        </div>
+    </section>
+
+    <section class="section">
+      <h2>Evidence hooks</h2>
+      <ul class="small">
+        <li><a href="https://scholarship.law.gwu.edu/faculty_publications/921/" target="_blank" rel="noopener">Solove, 2006</a>: PHI posts often follow “disclosure → increased accessibility → secondary use” (profiling, scams, targeted ads).</li>
+        <li><a href="https://par.nsf.gov/servlets/purl/10319486" target="_blank" rel="noopener">Amon et al., 2022</a>: Parents overshare to seek support; explicit permission from children is rare.</li>
+        <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2714680" target="_blank" rel="noopener">Steinberg, 2016</a>: Children’s privacy/identity interests deserve independent weight even when parents speak for the family.</li>
+        <li><a href="https://www.cnil.fr/en/sharing-photos-and-videos-your-child-social-networks-what-risks" target="_blank" rel="noopener">CNIL (France DPA)</a>: Official guidance warns about long-lived searchability and future discrimination from medical disclosures.</li>
+        <li><a href="https://par.nsf.gov/biblio/10540671-sharenting-tiktok-exploring-parental-sharing-behaviors-discourse-around-childrens-online-privacy" target="_blank" rel="noopener">Stephenson et al., 2024</a>: Virality/remix accelerate spread of health narratives beyond intended audiences.</li>
+
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>References</h2>
+      <ol class="refs small">
+        <li>TikTok — Duet: <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/duets" target="_blank" rel="noopener">link</a>; Stitch: <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/stitch" target="_blank" rel="noopener">link</a>; Controls: <a href="https://www.tiktok.com/safety/en/community-controls/" target="_blank" rel="noopener">link</a></li>
+        <li>Instagram — Remix controls: <a href="https://www.facebook.com/help/792438641600810/" target="_blank" rel="noopener">link</a></li>
+        <li>UNCRC GC No. 12 — child’s right to be heard: <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">pdf</a></li>
+        <li>ICO Children’s Code — age-appropriate design: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">overview</a></li>
+        <li>AAP — Informed consent &amp; assent: <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">2016</a>; <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">1995</a></li>
+        <li>Amon et al. 2022; Stephenson et al. 2024; Solove 2006 — see Evidence hooks.</li>
+        <li>Steinberg (2016) — Sharenting: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2714680" target="_blank" rel="noopener">SSRN</a></li>
+        <li>CNIL (Children’s images & risks): <a href="https://www.cnil.fr/en/sharing-photos-and-videos-your-child-social-networks-what-risks" target="_blank" rel="noopener">guidance</a></li>
+        <li>HHS — HIPAA Privacy Rule: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/index.html" target="_blank" rel="noopener">overview</a></li>
+        <li>FTC — COPPA: <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">rule</a></li>
+
+      </ol>
+    </section>
+
+    <div class="footer">© 2025 Sharenting Catalogue MVP • Scenario 2</div>
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
