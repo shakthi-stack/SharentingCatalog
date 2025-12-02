@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', initAssent);
 // ------- Block (i) definitions: scoped to the nearest .box -------
 (function initInfoBlocks(){
   const DEFINITIONS = {
-    status:   { title: "Status only", body: "We don’t auto-change this control. It stays at your current default for this post/account. You can still adjust it manually." },
+    status:   { title: "Status only", body: "We don't auto-change this control. It stays at your current default for this post/account. You can still adjust it manually." },
     friends:  { title: "Close Friends / Private", body: "Limits visibility to a small, chosen audience (e.g., Close Friends) or only you. Use when assent is unsure or risks are high." },
     narrowed: { title: "Narrowed audience", body: "Use a smaller audience than Public (e.g., Friends or a custom list) to reduce reach and copying." },
     off:      { title: "Off", body: "Disables this feature for the post (e.g., Remix, Downloads, Location). Note: viewers could still screen-record; keep sensitive details out." },
     thumbnail:{ title: "Non-identifying thumbnail", body: "Choose a cover image that avoids faces, names, school logos, house numbers, or distinctive locations." },
     identifiers: {
     title: "Identifiers",
-    body: "Names, date of birth, medical record numbers, diagnosis codes, lab results, hospital/clinic names, appointment dates/times, distinctive uniforms/signage—anything that links the post to the child’s identity or health details."
+    body: "Names, date of birth, medical record numbers, diagnosis codes, lab results, hospital/clinic names, appointment dates/times, distinctive uniforms/signage—anything that links the post to the child's identity or health details."
   },
   thumbnailphi: {
     title: "Non-identifying thumbnail (PHI)",
@@ -33,23 +33,23 @@ document.addEventListener('DOMContentLoaded', initAssent);
   },
     bystanders: {
     title: "Bystanders",
-    body: "People in the background (e.g., other patients, parents, staff). If you don’t have their consent/assent, blur or crop them out."
+    body: "People in the background (e.g., other patients, parents, staff). If you don't have their consent/assent, blur or crop them out."
   },
   comments: {
     title: "Comments: Limited/Off",
-    body: "Limits or disables public replies to reduce debate/speculation about a child’s condition. Prefer Limited/Off in clinical contexts."
+    body: "Limits or disables public replies to reduce debate/speculation about a child's condition. Prefer Limited/Off in clinical contexts."
   },
     sponsor: {
     title: "Sponsored content",
-    body: "Posts made to promote a product or cause (brand deals, affiliate links, crowdfunding). Sponsorship never overrides a child’s assent or best interests—apply the same (or stricter) privacy controls."
+    body: "Posts made to promote a product or cause (brand deals, affiliate links, crowdfunding). Sponsorship never overrides a child's assent or best interests—apply the same (or stricter) privacy controls."
   },
   checkin: {
     title: "Check-in later",
-    body: "Delay publishing and re-ask for assent after 24–48 hours. Time and distance can help children reconsider, especially if they were tired, upset, or pressured."
+    body: "Delay publishing and re-ask for assent after 24-48 hours. Time and distance can help children reconsider, especially if they were tired, upset, or pressured."
   },
     timeshift: {
     title: "Time-shift posting",
-    body: "Post after you’ve left a place (or schedule for later). Avoid live posting that reveals your current location or routine."
+    body: "Post after you've left a place (or schedule for later). Avoid live posting that reveals your current location or routine."
   },
   trail: {
     title: "Location trail",
