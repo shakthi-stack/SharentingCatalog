@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Keep Clinical Contexts Private — Sharenting Catalogue</title>
+  <title>Keep Clinical Contexts Private - Sharenting Catalogue</title>
   <link rel="stylesheet" href="styles/styles.css"/>
   <style>
     .refs{margin-top:8px;padding-left:18px}
@@ -19,23 +19,23 @@
       <h1>Keep Clinical Contexts Private</h1>
       <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="quickrules.html">Quick Rules</a>
+        <!-- <a href="quickrules.html">Quick Rules</a> -->
       </nav>
     </div>
 
-    <div class="chips">
+    <!-- <div class="chips">
       <span class="chip badge">Confidentiality</span>
       <span class="chip badge">Minimisation</span>
       <span class="chip badge">Best Interests</span>
-    </div>
+    </div> -->
 
     <section class="section">
-      <h2>Vignette</h2>
+      <h2>Scenario</h2>
       <p>A therapist (or parent) wants to post short clips from a child's therapy session to show progress or demonstrate techniques. The footage reveals the child's condition and the clinic context; other patients or staff may appear in the background.</p>
     </section>
 
     <section class="section">
-      <h2>Forces &amp; Risks</h2>
+      <h2>Why this matters (Risks and tradeoffs)</h2>
       <ul class="small">
         <li>Education/advocacy vs. confidentiality &amp; dignity</li>
         <li>Progress evidence vs. long-lived trace of diagnosis</li>
@@ -45,27 +45,27 @@
       <strong>Contextual Integrity:</strong> clinical context leaking into broad, remixable audiences</p>
     </section>
 
-    <section class="section flex" data-assent-group>
+    <section class="section flex" data-Assent-group>
       <div class="col">
-        <h2>Prompts</h2>
+        <h2> Ask and Decide</h2>
         <div class="box">
-          <p><strong>Rights:</strong> This is clinic footage—ask the child first and respect dissent.</p>
+          <p><strong>Rights:</strong> This is clinic footage, ask the child first and respect dissent.</p>
           <p><strong>Risk:</strong> Clinical details spread quickly. Prefer private sharing or Close Friends.</p>
           <p><strong>Norms:</strong> Many clinicians/parents share technique notes without faces or clinic signs.</p>
         </div>
 
-        <h2>Assent</h2>
-        <div class="assent">
-          <input id="a0" type="radio" name="assent" value="A0" checked><label for="a0">A0 Clear</label>
-          <input id="a1" type="radio" name="assent" value="A1"><label for="a1">A1 Unknown</label>
-          <input id="a2" type="radio" name="assent" value="A2"><label for="a2">A2 Qualified</label>
-          <input id="a3" type="radio" name="assent" value="A3"><label for="a3">A3 Dissent/High</label>
+        <h2>Assent Check</h2>
+        <div class="Assent">
+          <input id="a0" type="radio" name="Assent" value="A0" checked><label for="a0">A0 Clear</label>
+          <input id="a1" type="radio" name="Assent" value="A1"><label for="a1">A1 Unknown</label>
+          <input id="a2" type="radio" name="Assent" value="A2"><label for="a2">A2 Qualified</label>
+          <input id="a3" type="radio" name="Assent" value="A3"><label for="a3">A3 Dissent/High</label>
         </div>
 
-        <!-- HELPERS (A-state aware) -->
-        <h2>Helpers</h2>
+        <!-- How to do it (Quick tips) (A-state aware) -->
+        <h2>How to do it (Quick tips)</h2>
 
-        <div class="box note" data-assent="A0" style="display:none">
+        <div class="box note" data-Assent="A0" style="display:none">
           <ul class="small">
             <li>
               <span class="pill note">Blur/crop clinic markers</span> (logos, wall boards, badges).
@@ -83,7 +83,7 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A1" style="display:none">
+        <div class="box tight" data-Assent="A1" style="display:none">
           <ul class="small">
             <li><span class="pill off">Save to draft</span> and ask when the child is present.</li>
             <li>
@@ -98,7 +98,7 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A2" style="display:none">
+        <div class="box tight" data-Assent="A2" style="display:none">
           <ul class="small">
             <li>
               <span class="pill off">Close Friends / Private</span>
@@ -116,12 +116,12 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A3" style="display:none">
+        <div class="box tight" data-Assent="A3" style="display:none">
           <ul class="small">
             <li>
               <span class="pill off">Private only</span>
               <button class="info" aria-label="Close Friends / Private help" aria-expanded="false" data-def="friends">i</button>
-              ; keep as draft unless assent changes.
+              ; keep as draft unless Assent changes.
             </li>
             <li><span class="pill off">Comments Off</span> • <span class="pill off">Remix Off</span> • <span class="pill off">Downloads Off</span> • <span class="pill off">Location Off</span></li>
             <li><span class="pill note">Remove clinic identifiers</span> (boards, signage, badges).</li>
@@ -129,15 +129,15 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="note">Bystanders &amp; co-ownership: If peers/families appear, obtain consent/assent or blur/crop them out.</div>
+        <div class="note">Bystanders &amp; co-ownership: If peers/families appear, obtain consent/Assent or blur/crop them out.</div>
       </div>
 
       <div class="col">
         <h2>Control bindings</h2>
 
         <!-- TikTok bindings A0–A3 -->
-        <div class="box note" data-assent="A0" style="display:none">
-          <h3 class="small">TikTok — A0</h3>
+        <div class="box note" data-Assent="A0" style="display:none">
+          <h3 class="small">TikTok - A0</h3>
           <div class="kv">
             <div class="muted">Audience</div><div><span class="pill na">No change</span></div>
             <div class="muted">Remix</div><div><span class="pill off">Off (recommended)</span></div>
@@ -155,8 +155,8 @@
           </div>
         </div>
 
-        <div class="box tight" data-assent="A1" style="display:none">
-          <h3 class="small">TikTok — A1</h3>
+        <div class="box tight" data-Assent="A1" style="display:none">
+          <h3 class="small">TikTok - A1</h3>
           <div class="kv">
             <div class="muted">Audience</div><div><span class="pill na">No change</span></div>
             <div class="muted">Remix</div><div><span class="pill off">Off</span></div>
@@ -167,8 +167,8 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A2" style="display:none">
-          <h3 class="small">TikTok — A2</h3>
+        <div class="box tight" data-Assent="A2" style="display:none">
+          <h3 class="small">TikTok - A2</h3>
           <div class="kv">
             <div class="muted">Audience</div>
             <div><span class="pill off">Close Friends / Private</span>
@@ -182,8 +182,8 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A3" style="display:none">
-          <h3 class="small">TikTok — A3</h3>
+        <div class="box tight" data-Assent="A3" style="display:none">
+          <h3 class="small">TikTok - A3</h3>
           <div class="kv">
             <div class="muted">Audience</div>
             <div><span class="pill off">Private only</span>
@@ -198,8 +198,8 @@
         </div>
 
         <!-- Instagram bindings A0–A3 -->
-        <div class="box note" data-assent="A0" style="display:none">
-          <h3 class="small">Instagram — A0</h3>
+        <div class="box note" data-Assent="A0" style="display:none">
+          <h3 class="small">Instagram - A0</h3>
           <div class="kv">
             <div class="muted">Audience</div><div><span class="pill na">No change</span></div>
             <div class="muted">Remix</div><div><span class="pill off">Off (recommended)</span></div>
@@ -217,8 +217,8 @@
           </div>
         </div>
 
-        <div class="box tight" data-assent="A1" style="display:none">
-          <h3 class="small">Instagram — A1</h3>
+        <div class="box tight" data-Assent="A1" style="display:none">
+          <h3 class="small">Instagram - A1</h3>
           <div class="kv">
             <div class="muted">Audience</div>
             <div><span class="pill on">Close Friends</span>
@@ -232,8 +232,8 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A2" style="display:none">
-          <h3 class="small">Instagram — A2</h3>
+        <div class="box tight" data-Assent="A2" style="display:none">
+          <h3 class="small">Instagram - A2</h3>
           <div class="kv">
             <div class="muted">Audience</div>
             <div><span class="pill off">Close Friends / Private</span>
@@ -247,8 +247,8 @@
           <div class="info-host"></div>
         </div>
 
-        <div class="box tight" data-assent="A3" style="display:none">
-          <h3 class="small">Instagram — A3</h3>
+        <div class="box tight" data-Assent="A3" style="display:none">
+          <h3 class="small">Instagram - A3</h3>
           <div class="kv">
             <div class="muted">Audience</div>
             <div><span class="pill off">Private only</span>
@@ -269,36 +269,36 @@
       <h2>Law &amp; Policy</h2>
       <div class="box small">
         <div class="linkset">
-          <span>“Children have a right to be heard.” — <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">UNCRC GC No. 12</a></span>
-          <span>“High privacy by default.” — <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">ICO Children's Code</a></span>
-          <span>Assent in pediatrics — <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">AAP (2016)</a> / <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">AAP (1995)</a></span>
+          <span>"Children have a right to be heard." - <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">UNCRC GC No. 12</a></span>
+          <span>"High privacy by default." - <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">ICO Children's Code</a></span>
+          <span>Assent in pediatrics - <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">AAP (2016)</a> / <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">AAP (1995)</a></span>
         </div>
-        <p class="note">HIPAA typically governs providers, not parents—but clinic contexts still warrant high-privacy defaults and minimisation.</p>
+        <p class="note">HIPAA typically governs providers, not parents-but clinic contexts still warrant high-privacy defaults and minimisation.</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Evidence hooks</h2>
+      <h2>Why is it recommended (evidence)</h2>
       <ul class="small">
-        <li><a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519" target="_blank" rel="noopener">AAP, 2016</a>: Assent is not the same as absence of refusal; developmentally appropriate “yes” should guide sharing; dissent respected where possible.</li>
-        <li><a href="https://onlinelibrary.wiley.com/doi/10.1111/dmcn.15244" target="_blank" rel="noopener">Van Goidsenhoven & De Schauwer, 2022</a>: Consent/assent are relational and ongoing—especially for complex communication needs.</li>
-        <li><a href="https://www.tandfonline.com/doi/full/10.1080/09518398.2023.2266258" target="_blank" rel="noopener">Karmiris, 2024</a>: Ethical conundrums in assent for intellectual disabilities; create multiple modalities for comfort/discomfort.</li>
+        <li><a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519" target="_blank" rel="noopener">AAP, 2016</a>: Assent is not the same as absence of refusal; developmentally appropriate "yes" should guide sharing; dissent respected where possible.</li>
+        <li><a href="https://onlinelibrary.wiley.com/doi/10.1111/dmcn.15244" target="_blank" rel="noopener">Van Goidsenhoven & De Schauwer, 2022</a>: Consent/Assent are relational and ongoing-especially for complex communication needs.</li>
+        <li><a href="https://www.tandfonline.com/doi/full/10.1080/09518398.2023.2266258" target="_blank" rel="noopener">Karmiris, 2024</a>: Ethical conundrums in Assent for intellectual disabilities; create multiple modalities for comfort/discomfort.</li>
         <li><a href="https://www.tandfonline.com/doi/full/10.1080/10570314.2017.1421110" target="_blank" rel="noopener">Hays & Butauski, 2018</a>: Families weigh disclosure vs stigma; clinical visuals increase identifiability and local recognition.</li>
 
       </ul>
     </section>
 
     <section class="section">
-      <h2>References</h2>
+      <h2>Sources</h2>
       <ol class="refs small">
-        <li>TikTok — Comment settings: <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/comment-settings" target="_blank" rel="noopener">link</a>; Community controls: <a href="https://www.tiktok.com/safety/en/community-controls/" target="_blank" rel="noopener">link</a></li>
-        <li>Instagram — Comment controls: <a href="https://help.instagram.com/960692940400608" target="_blank" rel="noopener">link</a>; Remix controls: <a href="https://www.facebook.com/help/792438641600810/" target="_blank" rel="noopener">link</a></li>
-        <li>UNCRC GC No. 12 — child's right to be heard: <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">pdf</a></li>
-        <li>ICO Children's Code — age-appropriate design: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">overview</a></li>
-        <li>AAP — Informed consent &amp; assent: <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">2016</a>; <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">1995</a></li>
-        <li>Karmiris (2024) — Relational assent: <a href="https://www.tandfonline.com/doi/full/10.1080/09518398.2023.2266258" target="_blank" rel="noopener">link</a></li>
-        <li>Van Goidsenhoven & De Schauwer (2022) — Assent with complex communication needs: <a href="https://onlinelibrary.wiley.com/doi/10.1111/dmcn.15244" target="_blank" rel="noopener">link</a></li>
-        <li>Hays & Butauski (2018) — Privacy/disability/family: <a href="https://www.tandfonline.com/doi/full/10.1080/10570314.2017.1421110" target="_blank" rel="noopener">link</a></li>
+        <li>TikTok - Comment settings: <a href="https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/comment-settings" target="_blank" rel="noopener">link</a>; Community controls: <a href="https://www.tiktok.com/safety/en/community-controls/" target="_blank" rel="noopener">link</a></li>
+        <li>Instagram - Comment controls: <a href="https://help.instagram.com/960692940400608" target="_blank" rel="noopener">link</a>; Remix controls: <a href="https://www.facebook.com/help/792438641600810/" target="_blank" rel="noopener">link</a></li>
+        <li>UNCRC GC No. 12 - child's right to be heard: <a href="https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en" target="_blank" rel="noopener">pdf</a></li>
+        <li>ICO Children's Code - age-appropriate design: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/" target="_blank" rel="noopener">overview</a></li>
+        <li>AAP - Informed consent &amp; Assent: <a href="https://publications.aap.org/pediatrics/article/138/2/e20161485/52519/Informed-Consent-in-Decision-Making-in-Pediatric" target="_blank" rel="noopener">2016</a>; <a href="https://publications.aap.org/pediatrics/article/95/2/314/59437/Informed-Consent-Parental-Permission-and-Assent-in" target="_blank" rel="noopener">1995</a></li>
+        <li>Karmiris (2024) - Relational Assent: <a href="https://www.tandfonline.com/doi/full/10.1080/09518398.2023.2266258" target="_blank" rel="noopener">link</a></li>
+        <li>Van Goidsenhoven & De Schauwer (2022) - Assent with complex communication needs: <a href="https://onlinelibrary.wiley.com/doi/10.1111/dmcn.15244" target="_blank" rel="noopener">link</a></li>
+        <li>Hays & Butauski (2018) - Privacy/disability/family: <a href="https://www.tandfonline.com/doi/full/10.1080/10570314.2017.1421110" target="_blank" rel="noopener">link</a></li>
 
       </ol>
     </section>
